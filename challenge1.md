@@ -40,7 +40,7 @@ This IAM policy allows public access to the S3 bucket thebigiamchallenge-storage
 
 ## Solution
 
-To capture the flag in this challenge I read the IAM policy which have public access to download files from the files/ directory of the S3 bucket and I use the AWS CLI to listing the files with the command ==aws s3 ls s3://thebigiamchallenge-storage-9979f4b/files/==  First I am trying to open logo.png file but its show wrong flag please try again using == aws s3 cp s3://thebigiamchallenge-storage-9979f4b/files/logo.png - == that I use == aws s3 cp s3://thebigiamchallenge-storage-9979f4b/files/flag1.txt - == to download the file and content show on the terminal and then I copy the downloaded contnent and patse it to open ==https://bigiamchallenge.com/challenge/1== page to verifiy the flags and click on check I got success then my  I completed the challenge. 
+To capture the flag in this challenge I read the IAM policy which have public access to download files from the files/ directory of the S3 bucket and I use the AWS CLI to listing the files with the command *aws s3 ls s3://thebigiamchallenge-storage-9979f4b/files/*  First I am trying to open logo.png file but its show wrong flag please try again using *aws s3 cp s3://thebigiamchallenge-storage-9979f4b/files/logo.png -* that I use *aws s3 cp s3://thebigiamchallenge-storage-9979f4b/files/flag1.txt -* to download the file and content show on the terminal and then I copy the downloaded contnent and patse it to open *https://bigiamchallenge.com/challenge/1* page to verifiy the flags and click on check I got success then my  I completed the challenge. 
 
 
 ## Reflection

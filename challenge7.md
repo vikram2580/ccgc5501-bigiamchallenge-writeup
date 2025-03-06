@@ -89,6 +89,22 @@ bastion_enabled = true
 
    ```
 
-   I found the flag that is `{FLAG:bastion::ifYouHaveAccessToAnEC2YouHaveAccessToItsIamPermissions}`
+   I found the flag that is `{FLAG:bastion::ifYouHaveAccessToAnEC2YouHaveAccessToItsIamPermissions}` Then i paste it into challenge site and got success message
+
+## Reflection  
+### What was your approach?  
+To solve the issue I utilized a step-by-step method where I analyzed the Terraform error before implementing a defined debugging framework to fix it. I proceeded beyond the IP address issue by inputting my IP address manually until the problem was resolved. The application of Terraform led me to use Cloudfox which helped me locate the instance ID to perform flag retrieval through the instructed steps.
+
+### What was the biggest challenge?  
+The main obstacle occurred during my attempt to automatically retrieve the IP address through Terraform. I was at first confused because the USER_IP variable displayed HTML data instead of showing my public IP address. My extensive effort to resolve issues led me to find out that https://ifconfig.me provided an unexpected response.
+
+### How did you overcome the challenges?  
+I achieved resolution by obtaining my public IP through curl ifconfig.me before entering it directly into the Terraform variables. Manually providing public IP to Terraform solved the dynamic fetching issue thus enabling the successful completion of the process.
+
+### What led to the breakthrough?  
+The resolution became possible when I paused to inspect the variable resolution process. The problem stemmed from the operation that fetched public IPs because ifconfig.me delivered HTML content instead of showing the actual IP address. I discovered that avoiding dynamic fetch and using the IP value manually solved the problem to let me move forward.
+
+### On the blue side, how can the learning be used?  
+Working with cloud infrastructure proved the critical need for validating external services during my experience. Automation pipelines avoid issues by using secure and dependable dynamic input processes to retrieve public IP addresses. Security demands that you check and verify external data because improper or incorrect content delivery might create unexpected issues. The detection of potential weaknesses depends on routine checks between Terraform configurations and error logs together with external service interactions to strengthen overall stability as well as security in the environment.
    
 
